@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.task {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+.task.high { border-left: 5px solid red; }
+.task.medium { border-left: 5px solid orange; }
+.task.low { border-left: 5px solid green; }

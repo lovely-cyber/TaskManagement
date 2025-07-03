@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TaskEasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-pink-50 min-h-screen flex items-center justify-center p-6 font-poppins">
+    <div class="bg-pink-100 w-full max-w-2xl rounded-3xl shadow-2xl p-8 space-y-8 border-4 border-pink-300">
+      <h1 class="text-4xl font-extrabold text-center text-pink-600 tracking-wide drop-shadow-md">TaskEasy Yupss💕</h1>
+      
+      <form id="taskForm" class="space-y-5">
+        <input
+          type="text"
+          id="title"
+          placeholder="Judul Tugas Kamu..."
+          required
+          class="w-full border-2 border-pink-300 focus:border-pink-500 rounded-2xl px-5 py-3 placeholder-pink-400 focus:outline-none shadow-md transition"
+        />
+        <textarea
+          id="description"
+          placeholder="Deskripsi Tugas, jangan lupa yaa~"
+          class="w-full border-2 border-pink-300 focus:border-pink-500 rounded-2xl px-5 py-3 placeholder-pink-400 focus:outline-none shadow-md transition resize-none"
+          rows="4"
+        ></textarea>
+        <div class="flex flex-col sm:flex-row gap-5">
+          <select id="priority" class="flex-1 border-2 border-pink-300 rounded-2xl px-5 py-3 text-pink-700 font-semibold bg-pink-50 shadow-inner focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+            <option value="low">💗 Rendah</option>
+            <option value="medium">💖 Sedang</option>
+            <option value="high">💓 Tinggi</option>
+          </select>
+          <select id="status" class="flex-1 border-2 border-pink-300 rounded-2xl px-5 py-3 text-pink-700 font-semibold bg-pink-50 shadow-inner focus:outline-none focus:ring-2 focus:ring-pink-400 transition">
+            <option value="todo">📌 To Do</option>
+            <option value="inprogress">⏳ Sedang Dikerjakan</option>
+            <option value="done">✅ Selesai</option>
+          </select>
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 text-white font-bold rounded-3xl px-6 py-3 hover:from-pink-500 hover:to-pink-700 shadow-lg transition"
+        >
+          Tambah Tugas
+        </button>
+      </form>
+
+      <ul id="taskList" class="space-y-6"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
